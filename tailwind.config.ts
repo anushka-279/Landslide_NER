@@ -13,6 +13,14 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["DM Sans", "sans-serif"],
+        display: ["Manrope", "sans-serif"],
+      },
+      boxShadow: {
+        panel: "0 8px 30px rgba(20, 59, 70, 0.06)",
+        soft: "0 2px 8px rgba(20, 59, 70, 0.05)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
