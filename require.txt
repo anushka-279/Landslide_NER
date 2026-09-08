@@ -1,5 +1,10 @@
 # Runtime requirements for the Landslide Early Warning System dashboard
-# This is a React/Vite frontend, so dependencies are installed from package.json.
+# This is a React/Vite frontend, so dependencies are installed from package.json
+# and pinned by pnpm-lock.yaml. No Python packages are required.
 
 Node.js >= 18
 pnpm >= 10
+
+# Map note: the prototype uses inline SVG/CSS visuals.
+# Leaflet, Mapbox, WebGL, and external 3D packages are not required yet.
+# Future GIS integrations should be added to package.json when approved.

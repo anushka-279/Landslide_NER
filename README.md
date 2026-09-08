@@ -30,6 +30,11 @@ The current application is a **frontend-only demonstration**. It uses realistic 
   - Road status
   - Plain-language explanation of the risk level
 - Map legend and district monitoring summary cards.
+- Named visual zones for the Jatinga corridor, NH-27 watch area, and central watch area.
+- Risk zones mode for quick threat comparison and Terrain mode for a calmer topographic reading.
+- Lightweight zoom, reset, marker focus rings, and animated pulses on high/severe locations.
+- Responsive map controls that remain usable on smaller screens.
+- These are visual aids only; they do not add live GIS accuracy or a true 3D engine.
 
 ### 2. Situation overview
 
@@ -63,8 +68,13 @@ The map implementation is in `MapGraphic` inside `client/pages/Index.tsx`:
 - Village markers are rendered from the `villages` array in `client/mockData.js`.
 - Clicking a marker updates the selected village and detail panel.
 - Marker colors come from the shared `riskMeta` configuration.
+- Named zone overlays group nearby locations so the map is easier to scan than isolated pins.
+- The Risk zones/Terrain switch changes the visual emphasis without changing the underlying mock data.
+- Zoom and reset controls update a lightweight CSS/SVG viewport scale.
+- High and severe locations use a restrained pulse animation; `prefers-reduced-motion` disables it.
+- No Leaflet, Mapbox, WebGL, or external 3D package is currently required.
 
-This means the map is an **illustrative monitoring view**, not a GIS map. It does not currently use latitude/longitude, a geographic projection, map tiles, satellite imagery, or real district boundaries.
+This means the map is an **illustrative monitoring view**, not a GIS map. It does not currently use latitude/longitude, a geographic projection, map tiles, satellite imagery, or real district boundaries. The terrain view is a visual treatment of the same SVG, not a measured 3D elevation model.
 
 ## Is the current data and map accurate?
 
@@ -256,7 +266,7 @@ Sensors / weather / GIS / field reports
       SMS / push / email / public advisories
 ```
 
-The current prototype covers the last dashboard layer with mock inputs. The other layers still need to be designed, implemented, tested, and approved.
+The current prototype covers the last dashboard layer with mock inputs. The other layers still need to be designed, implemented, tested, and approved. The current map visuals can be retained as an operator-friendly overlay style after the underlying SVG is replaced with verified GIS layers.
 
 ## Environment variables
 
