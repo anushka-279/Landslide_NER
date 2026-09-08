@@ -1,0 +1,5 @@
+# Runtime requirements for the Landslide Early Warning System dashboard
+# This is a React/Vite frontend, so dependencies are installed from package.json.
+
+Node.js >= 18
+pnpm >= 10
