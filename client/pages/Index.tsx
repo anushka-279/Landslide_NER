@@ -86,7 +86,7 @@ function Logo() {
       </div>
       <div>
         <p className="font-display text-sm font-extrabold leading-tight tracking-[-0.02em] text-white">Dima Hasao</p>
-        <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-teal-100/70">District Control Room</p>
+        <p className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-teal-100">District Control Room</p>
       </div>
     </div>
   );
